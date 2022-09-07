@@ -1,11 +1,11 @@
-CLAMP_53: 012 - uncovered. Third time period (original inlet data file = inlet_012_3.csv), with the 1.5 x mesh
+CLAMP_54: 012 - uncovered. Third time period (original inlet data file = inlet_012_3.csv), with the 1.5 x mesh
 
-Based on clamp_36
+Based on clamp_53
 
-Mesh: 1.5 x super coarse mesh (ca 6000 cells)
+Mesh: 1.5 x super coarse mesh (6123 cells)
 OpenFOAM version: 9
 Solver: clampPimpleFoam v6 and pimpleFoam
 
-D = 101699
-F = 367
+D = 101699 / 5 = 20339.8
+F = 367 / 5 = 73.4
 QrMulti = 1
