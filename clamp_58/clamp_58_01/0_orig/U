@@ -32,7 +32,7 @@ boundaryField
           separator        ";";            // optional (defaults to ",")
           mergeSeparators  no;             // merge multiple separators
           //interpolationScheme linear;    // options are linear and spline.
-          file             "./data/clamp_57_DataTable.csv";
+          file             "./data/clamp_58_DataTable.csv";
      }
   }
 

@@ -32,7 +32,7 @@ boundaryField
           componentColumns (4);            // data column index
           separator        ";";            // optional (defaults to ",")
           mergeSeparators  no;             // merge multiple separators
-          file             "./data/clamp_57_DataTable.csv";
+          file             "./data/clamp_58_DataTable.csv";
      }
     }
     outlet
