@@ -1,0 +1,91 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+porosity1
+{
+    type            explicitPorositySource;
+    active          yes;
+
+    explicitPorositySourceCoeffs
+    {
+
+    selectionMode   cellZone;
+    cellZone        clamp_zone;
+
+    type           DarcyForchheimer;
+
+    D 52283;
+    F 54;
+
+    DarcyForchheimerCoeffs
+    {
+      d ($D $D $D);
+      f ($F $F $F);
+
+      coordinateSystem
+      {
+          type  cartesian;
+          origin  (0 0 0);
+          coordinateRotation
+          {
+            type axesRotation;
+            e1 (1 0 0);
+            e2 (0 1 0);
+        }
+      }
+    }
+  }
+}
+
+porosity2
+{
+    type            explicitPorositySource;
+    active          yes;
+
+    explicitPorositySourceCoeffs
+    {
+
+    selectionMode   cellZone;
+    cellZone        cover_zone;
+
+    type           DarcyForchheimer;
+
+    Dcv 1340500;       // 1.828 e08*1.1/150. 1.1 is the thickness of TopTex, 150 is the thickness of the mesh
+    Fcv 10.89;      // 1.471e03*1.1/150. D and F come from RiSe
+
+    DarcyForchheimerCoeffs
+    {
+      d ($Dcv $Dcv $Dcv);
+      f ($Fcv $Fcv $Fcv);
+
+      coordinateSystem
+      {
+          type  cartesian;
+          origin  (0 0 0);
+          coordinateRotation
+          {
+            type axesRotation;
+            e1 (1 0 0);
+            e2 (0 1 0);
+        }
+      }
+    }
+  }
+}
+
+
+// ************************************************************************* //
