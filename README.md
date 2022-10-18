@@ -24,3 +24,7 @@ _73: Uncovered. Year 2011. Period 1. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _74: Uncovered. Year 2011. Period 2. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _75: Uncovered. Year 2011. Period 3. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _76: Uncovered. Year 2011. Period 4. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
+_77: Covered. Year 2011. Period 1. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
+_78: Covered. Year 2011. Period 2. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
+_79: Covered. Year 2011. Period 3. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
+_80: Covered. Year 2011. Period 4. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
