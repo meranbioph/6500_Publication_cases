@@ -5,7 +5,7 @@ Based on clamp_43 (early time period of 2011)
 Mesh: 1.5 x super coarse mesh on x and y (6123 cells)
 OpenFOAM version: 9
 Solver: clampPimpleFoam v6 and pimpleFoam
-Inlet: 006_1
+Inlet: inlet_covered_p1
 
 D = 52283
 F = 54

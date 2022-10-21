@@ -13,7 +13,6 @@ cd ${0%/*} || exit 1  # Run from this directory
 # The second line sets the working directory
 ###############################
 # set up the cases
-# CURRENTLY ASSUMES FIRST IS LEFT-TO-RIGHT
 
 cp -r ./clamp_80_01/0_orig ./clamp_80_01/clamp_80_01_ltr/0
 cp -r ./clamp_80_01/0_orig ./clamp_80_01/clamp_80_01_rtl/0
@@ -62,8 +61,9 @@ rm ./log.pimpleFoam
 
 ###############################
 # first loop of the paired cases
+# CURRENTLY ASSUMES FIRST IS RIGHT-TO-LEFT: Ensure blockMeshDict in clamp_80_01/system matches this (take from _80_01_ltr or _80_01_rtl)
 
-wtw="ltr"
+wtw="rtl"
 cp -r ./clamp_80_01/system/controlDict_start ./clamp_80_01/clamp_80_01_"$wtw"/system/controlDict
 runApplication pimpleFoam -case ./clamp_80_01/clamp_80_01_"$wtw"
 rm ./clamp_80_01/clamp_80_01_"$wtw"/system/controlDict
@@ -75,13 +75,13 @@ runApplication pimpleFoam -case ./clamp_80_01/clamp_80_01_"$wtw"
 mv ./clamp_80_01/clamp_80_01_"$wtw"/90 ./clamp_80_01/0
 rm -r ./clamp_80_01/clamp_80_01_"$wtw"/1
 
-runApplication mapFields -case ./clamp_80_02/clamp_80_02_ltr -consistent ./clamp_80_01
+runApplication mapFields -case ./clamp_80_02/clamp_80_02_"$wtw" -consistent ./clamp_80_01
 
-cp ./clamp_80_01/0/phi ./clamp_80_02/clamp_80_02_ltr/0/phi
+cp ./clamp_80_01/0/phi ./clamp_80_02/clamp_80_02_"$wtw"/0/phi
 
-runApplication clampPimpleFoam -case ./clamp_80_02/clamp_80_02_ltr
-mv ./clamp_80_02/clamp_80_02_ltr/0 ./clamp_80_02/0
-mv ./clamp_80_02/clamp_80_02_ltr/900 ./clamp_80_02/900
+runApplication clampPimpleFoam -case ./clamp_80_02/clamp_80_02_"$wtw"
+mv ./clamp_80_02/clamp_80_02_"$wtw"/0 ./clamp_80_02/0
+mv ./clamp_80_02/clamp_80_02_"$wtw"/900 ./clamp_80_02/900
 
 rm ./log.mapFields
 rm ./log.pimpleFoam
@@ -94,7 +94,7 @@ rm ./log.clampPimpleFoam
 loopi=2
 
 # Start loop
-while [ $loopi -le 527 ]       #1056/2-1          # Number of loops = hours / 4, 96 = day
+while [ $loopi -le 601 ]       #1056/2-1          # Number of loops = hours / 4, 96 = day
 do
   # to find C4. NR is the line number (there is a header, so the 4 of C4 is row 5), $4 is the fourth column. How to reference the right file...
   wtw=$(awk -F ";" -v loopj="$(($loopi*2-1))" '{if(NR==loopj) print $6;}' ./data/clamp_80_DataTable.csv)

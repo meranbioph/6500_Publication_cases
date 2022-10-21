@@ -1,4 +1,4 @@
-CLAMP_78: 006 - covered. Second time period (original inlet data file = inlet_006_2.csv)
+CLAMP_78: covered. Second time period
 
 post sensitivity, w cover
 
@@ -7,6 +7,7 @@ Based on clamp_47
 Mesh: 1.5 x super coarse mesh (6123  cells)
 OpenFOAM version: 9
 Solver: clampPimpleFoam v6 and pimpleFoam
+inlet: inlet_covered_p2
 
 D = 52283;
 F = 54;
