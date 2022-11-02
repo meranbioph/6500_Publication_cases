@@ -1,13 +1,13 @@
-CLAMP_79: covered.
+CLAMP_79: covered. Third time period
 
-post sensitivity analysis, with cover
+post sensitivity, w cover
 
-Based on clamp_53
+Based on clamp_43
 
-Mesh: 1.5 x super coarse mesh (ca 6000 cells)
+Mesh: 1.5 x super coarse mesh (6123  cells)
 OpenFOAM version: 9
 Solver: clampPimpleFoam v6 and pimpleFoam
-inlet: inlet_covered_p1
+inlet: inlet_covered_p3
 
 D = 52283
 F = 54

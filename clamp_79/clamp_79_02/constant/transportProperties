@@ -29,4 +29,5 @@ Asf     [0 -1 0 0 0 0 0] 30.04; // 30.04; specific surface area - fluid:solid
 Deq     [0 1 0 0 0 0 0] 0.13786; //characteristic length
 invPor  [0 0 0 0 0 0 0] 0.55; // inverse porosity - needed in Ts. IF THIS IS CHANGED, CHANGE por IN SETFIELDSDICT
 QrMulti [0 0 0 0 0 0 0] 1.2;
+
 // ************************************************************************* //

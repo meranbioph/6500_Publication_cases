@@ -1,0 +1,31 @@
+#!/bin/sh
+cd ${0%/*} || exit 1  # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+###############################
+# Allrun for clamp_9001
+# This is a Shell script, so it uses # to comment out text
+# to make this an exectuable file, in Shell in the case directory, run: chmod +x Allrun
+# run the Allrun file, in Shell in the case directory, run: ./Allrun
+# The first line of this file tells Ubunutu to run the shell, I think.
+# The second line sets the working directory
+###############################
+
+runApplication blockMesh
+rm ./log.blockMesh
+runApplication topoSet
+rm ./log.topoSet
+runApplication setFields
+rm ./log.setFields
+
+###############################
+
+runApplication pimpleFoam
+rm ./log.pimpleFoam
+cp -r ./system/controlDict ./system/controlDict_start
+rm ./system/controlDict
+cp -r ./system/controlDict_89 ./system/controlDict
+runApplication pimpleFoam
+rm ./log.pimpleFoam
