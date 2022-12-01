@@ -29,6 +29,8 @@ _78: Covered. Year 2011. Period 2. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _79: Covered. Year 2011. Period 3. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _80: Covered. Year 2011. Period 4. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 clamp_supp
+--clamp_47mi05: clamp_47 with broad mesh (2688 cells) for mesh independence testing
+--clamp_47mi20: clamp_47 with fine mesh (10752 cells) for mesh independence testing
 --clamp_47xp: clamp_47 with extra probes to look at Tf field near to the clamp
 --clamp_9001: Stability of U field at 1 m/s inlet. Mesh 6123. DF: baseline
 --clamp_9010: Stability of U field at 10 m/s inlet. Mesh 6123. DF: baseline
