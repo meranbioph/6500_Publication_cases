@@ -28,3 +28,8 @@ _77: Covered. Year 2011. Period 1. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _78: Covered. Year 2011. Period 2. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _79: Covered. Year 2011. Period 3. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _80: Covered. Year 2011. Period 4. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
+clamp_supp
+--clamp_47xp: clamp_47 with extra probes to look at Tf field near to the clamp
+--clamp_9001: Stability of U field at 1 m/s inlet. Mesh 6123. DF: baseline
+--clamp_9010: Stability of U field at 10 m/s inlet. Mesh 6123. DF: baseline
+--clamp_9020: Stability of U field at 20 m/s inlet. Mesh 6123. DF: baseline
