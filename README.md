@@ -3,7 +3,7 @@
 This repository holds the cases used in the project 650.0 Sugar beet clamp temperature modelling - A computational fluid dynamics model.
 The project is funded by Nordic Beet Research and run in collaboartion with LTH/ Lund University department of Energy Sciences.
 
-The cases have the following features:
+The cases have the following features:  
 _43: Uncovered. Year 2011. Period 1. Mesh 6123. DF:baseline. Qr: baseline. Asf: baseline
 _47: Uncovered. Year 2011. Period 2. Mesh 6123. DF:baseline. Qr: baseline. Asf: baseline
 _53: Uncovered. Year 2011. Period 3. Mesh 6123. DF:baseline. Qr: baseline. Asf: baseline
