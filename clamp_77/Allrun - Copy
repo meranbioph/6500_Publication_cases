@@ -13,7 +13,6 @@ cd ${0%/*} || exit 1  # Run from this directory
 # The second line sets the working directory
 ###############################
 # set up the cases
-# CURRENTLY ASSUMES FIRST IS LEFT-TO-RIGHT
 
 cp -r ./clamp_77_01/0_orig ./clamp_77_01/clamp_77_01_ltr/0
 cp -r ./clamp_77_01/0_orig ./clamp_77_01/clamp_77_01_rtl/0
@@ -57,13 +56,15 @@ cp -r ./clamp_77_01/system/controlDict_zero ./clamp_77_01/clamp_77_01_ltr/system
 rm ./clamp_77_01/clamp_77_01_ltr/0/U
 mv ./clamp_77_01/clamp_77_01_ltr/0/U_zero ./clamp_77_01/clamp_77_01_ltr/0/U
 runApplication pimpleFoam -case ./clamp_77_01/clamp_77_01_ltr
+cp -r ./clamp_77_01/0_orig/U ./clamp_77_01/clamp_77_01_ltr/0/U
 mv ./clamp_77_01/clamp_77_01_ltr/900 ./clamp_77_01/zero
 rm ./log.pimpleFoam
 
 ###############################
 # first loop of the paired cases
+# Currently assumes this is right-to-left. blockMeshDict in clamp_77_01/system needs to be changed manually to match rtl or ltr at this step, otherwise mapFields falls apart
 
-wtw="ltr"
+wtw="rtl"
 cp -r ./clamp_77_01/system/controlDict_start ./clamp_77_01/clamp_77_01_"$wtw"/system/controlDict
 runApplication pimpleFoam -case ./clamp_77_01/clamp_77_01_"$wtw"
 rm ./clamp_77_01/clamp_77_01_"$wtw"/system/controlDict
@@ -75,13 +76,13 @@ runApplication pimpleFoam -case ./clamp_77_01/clamp_77_01_"$wtw"
 mv ./clamp_77_01/clamp_77_01_"$wtw"/90 ./clamp_77_01/0
 rm -r ./clamp_77_01/clamp_77_01_"$wtw"/1
 
-runApplication mapFields -case ./clamp_77_02/clamp_77_02_ltr -consistent ./clamp_77_01
+runApplication mapFields -case ./clamp_77_02/clamp_77_02_"$wtw" -consistent ./clamp_77_01
 
-cp ./clamp_77_01/0/phi ./clamp_77_02/clamp_77_02_ltr/0/phi
+cp ./clamp_77_01/0/phi ./clamp_77_02/clamp_77_02_"$wtw"/0/phi
 
-runApplication clampPimpleFoam -case ./clamp_77_02/clamp_77_02_ltr
-mv ./clamp_77_02/clamp_77_02_ltr/0 ./clamp_77_02/0
-mv ./clamp_77_02/clamp_77_02_ltr/900 ./clamp_77_02/900
+runApplication clampPimpleFoam -case ./clamp_77_02/clamp_77_02_"$wtw"
+mv ./clamp_77_02/clamp_77_02_"$wtw"/0 ./clamp_77_02/0
+mv ./clamp_77_02/clamp_77_02_"$wtw"/900 ./clamp_77_02/900
 
 rm ./log.mapFields
 rm ./log.pimpleFoam

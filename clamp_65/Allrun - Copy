@@ -57,6 +57,7 @@ cp -r ./clamp_65_01/system/controlDict_zero ./clamp_65_01/clamp_65_01_ltr/system
 rm ./clamp_65_01/clamp_65_01_ltr/0/U
 mv ./clamp_65_01/clamp_65_01_ltr/0/U_zero ./clamp_65_01/clamp_65_01_ltr/0/U
 runApplication pimpleFoam -case ./clamp_65_01/clamp_65_01_ltr
+cp -r ./clamp_65_01/0_orig/U ./clamp_65_01/clamp_65_01_ltr/0/U
 mv ./clamp_65_01/clamp_65_01_ltr/360 ./clamp_65_01/zero
 rm ./log.pimpleFoam
 
