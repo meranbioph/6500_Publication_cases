@@ -75,13 +75,13 @@ runApplication pimpleFoam -case ./clamp_81_01/clamp_81_01_"$wtw"
 mv ./clamp_81_01/clamp_81_01_"$wtw"/90 ./clamp_81_01/0
 rm -r ./clamp_81_01/clamp_81_01_"$wtw"/1
 
-runApplication mapFields -case ./clamp_81_02/clamp_81_02_ltr -consistent ./clamp_81_01
+runApplication mapFields -case ./clamp_81_02/clamp_81_02_"$wtw" -consistent ./clamp_81_01
 
-cp ./clamp_81_01/0/phi ./clamp_81_02/clamp_81_02_ltr/0/phi
+cp ./clamp_81_01/0/phi ./clamp_81_02/clamp_81_02_"$wtw"/0/phi
 
-runApplication clampPimpleFoam -case ./clamp_81_02/clamp_81_02_ltr
-mv ./clamp_81_02/clamp_81_02_ltr/0 ./clamp_81_02/0
-mv ./clamp_81_02/clamp_81_02_ltr/900 ./clamp_81_02/900
+runApplication clampPimpleFoam -case ./clamp_81_02/clamp_81_02_"$wtw"
+mv ./clamp_81_02/clamp_81_02_"$wtw"/0 ./clamp_81_02/0
+mv ./clamp_81_02/clamp_81_02_"$wtw"/900 ./clamp_81_02/900
 
 rm ./log.mapFields
 rm ./log.pimpleFoam
