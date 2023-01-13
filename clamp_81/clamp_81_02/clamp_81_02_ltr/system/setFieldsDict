@@ -20,6 +20,9 @@ defaultFieldValues
 (
     volScalarFieldValue por 1
     volScalarFieldValue clampDummy 0
+    volScalarFieldValue covDummy 0
+    volScalarFieldValue inDummy 0
+    volScalarFieldValue outDummy 0
 );
 
 regions
@@ -33,27 +36,63 @@ regions
             volScalarFieldValue clampDummy 1
         );
     }
+    zoneToCell
+    {
+        name  cover1_zone;
+        fieldValues
+        (
+            volScalarFieldValue covDummy 1
+        );
+    }
+    zoneToCell
+    {
+        name  cover2_zone;
+        fieldValues
+        (
+            volScalarFieldValue covDummy 1
+        );
+    }
+    zoneToCell
+    {
+        name  cover3_zone;
+        fieldValues
+        (
+            volScalarFieldValue covDummy 1
+        );
+    }
+    zoneToCell
+    {
+        name  jupette1_zone;
+        fieldValues
+        (
+            volScalarFieldValue covDummy 1
+        );
+    }
+    zoneToCell
+    {
+        name  jupette2_zone;
+        fieldValues
+        (
+            volScalarFieldValue covDummy 1
+        );
+    }
+    zoneToCell
+    {
+        name  inner_zone;
+        fieldValues
+        (
+            volScalarFieldValue inDummy 1
+        );
+    }
+    zoneToCell
+    {
+        name  outer_zone;
+        fieldValues
+        (
+            volScalarFieldValue outDummy 1
+        );
+    }
 );
-
-// clampDummy
-
-//defaultFieldValues
-//(
-//    volScalarFieldValue clampDummy 0
-//);
-//
-//region
-//(
-//    setToCellZone
-//    {
-//        set   clamp_zone;
-//        fieldValues
-//        (
-//            volScalarFieldValue clampDummy 1
-//        );
-//    }
-//);
-
 
 
 // ************************************************************************* //

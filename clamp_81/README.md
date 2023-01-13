@@ -1,4 +1,4 @@
-CLAMP_81: Period 2, post sensitivity, w Jupette cover. 
+CLAMP_81: Period 2, post sensitivity, w Jupette cover. FEET ONLY WITH TopTex
 NOTE THAT THERE IS NO PERIOD 1 JUPETTE CLAMP. THE JUPETTE WAS APPLIED 8 DEC 2011.
 
 Based on clamp_43 (early time period of 2011)

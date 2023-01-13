@@ -46,22 +46,6 @@ regions
     }
     zoneToCell
     {
-        name  cover2_zone;
-        fieldValues
-        (
-            volScalarFieldValue covDummy 1
-        );
-    }
-    zoneToCell
-    {
-        name  cover3_zone;
-        fieldValues
-        (
-            volScalarFieldValue covDummy 1
-        );
-    }
-    zoneToCell
-    {
         name  jupette1_zone;
         fieldValues
         (
