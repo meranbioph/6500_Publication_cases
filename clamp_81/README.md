@@ -1,7 +1,7 @@
 CLAMP_81: Period 2, post sensitivity, w Jupette cover. FEET ONLY WITH TopTex
 NOTE THAT THERE IS NO PERIOD 1 JUPETTE CLAMP. THE JUPETTE WAS APPLIED 8 DEC 2011.
 
-Based on clamp_43 (early time period of 2011)
+Based on clamp_78 (Second time period of 2011)
 
 Mesh: 1.5 x super coarse mesh on x and y (6123 cells)
 OpenFOAM version: 9
