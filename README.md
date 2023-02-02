@@ -24,10 +24,11 @@ _73: Uncovered. Year 2011. Period 1. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline
 _74: Uncovered. Year 2011. Period 2. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
 _75: Uncovered. Year 2011. Period 3. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
 _76: Uncovered. Year 2011. Period 4. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
-_77: Covered. Year 2011. Period 1. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
-_78: Covered. Year 2011. Period 2. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
-_79: Covered. Year 2011. Period 3. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
-_80: Covered. Year 2011. Period 4. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
+_77: Covered - TT. Year 2011. Period 1. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
+_78: Covered - TT. Year 2011. Period 2. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
+_79: Covered - TT. Year 2011. Period 3. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
+_80: Covered - TT. Year 2011. Period 4. Mesh 6123. DF:Ergun. Qr: 1.2. Asf: baseline  
+
 clamp_supp  
 --clamp_47mi05: clamp_47 with broad mesh (2688 cells) for mesh independence testing  
 --clamp_47mi20: clamp_47 with fine mesh (10752 cells) for mesh independence testing  
@@ -35,3 +36,7 @@ clamp_supp
 --clamp_9001: Stability of U field at 1 m/s inlet. Mesh 6123. DF: baseline  
 --clamp_9010: Stability of U field at 10 m/s inlet. Mesh 6123. DF: baseline  
 --clamp_9020: Stability of U field at 20 m/s inlet. Mesh 6123. DF: baseline  
+
+clamp_ext
+_81: Covered - Juppette ca. +0.15 to +4.00 (Feet exposed). Year 2011. Period 2. Mesh 6123. DF: Ergun. Qr: 1.2. Asf: Baseline
+_82: Covered - Juppette ca. +0.00 to +4.00 (Feet covered). Year 2011. Period 2. Mesh 6123. DF: Ergun. Qr: 1.2. Asf: Baseline
