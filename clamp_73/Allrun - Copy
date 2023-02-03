@@ -126,6 +126,11 @@ do
       cp -r ./clamp_73_01/0_orig ./clamp_73_01/clamp_73_01_"$wtw"/$((($loopi-2)*900 + 810))
     else
       cp -r ./clamp_73_01/$((($loopi-2)*900)) ./clamp_73_01/clamp_73_01_"$wtw"/$((($loopi-2)*900 + 810))
+      # If there was a U=0 run in the last loop, reset the U file to read from the input data file
+      if $( awk -F ";" -v loopj="$(($loopi*2-2))" '{if(NR==loopj) print $9;}' ./data/clamp_73_DataTable.csv )
+      then
+      	cp -r ./clamp_73_01/0_orig/U ./clamp_73_01/clamp_73_01_"$wtw"/$((($loopi-2)*900 + 810))/U
+      fi  
     fi
 
     # run pimpleFoam for one second with dt = 0.001
